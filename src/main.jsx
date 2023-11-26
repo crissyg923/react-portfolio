@@ -5,13 +5,13 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './index.css';
 
-// Bringing in the pages the router will use to conditionally show the appropriate views
+
 import App from './App';
 import ErrorPage from './pages/ErrorPage';
 import HomePage from './pages/HomePage';
 import ContactPage from './pages/ContactPage';
 import AboutPage from './pages/AboutPage';
-import PortfolioPage from './pages/PortfolioPage'
+// import PortfolioPage from './pages/PortfolioPage'
 
 // Define the accessible routes, and which components respond to which URL
 const router = createBrowserRouter([
@@ -32,10 +32,10 @@ const router = createBrowserRouter([
         path: 'Contact',
         element: <ContactPage />,
       },
-      {
-        path: 'Portfolio',
-        element: <PortfolioPage />,
-      },
+      // {
+      //   path: 'Portfolio',
+      //   element: <PortfolioPage />,
+      // },
     ],
   },
 ]);

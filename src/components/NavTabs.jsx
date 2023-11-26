@@ -4,6 +4,9 @@ function NavTabs() {
   const currentPage = useLocation().pathname;
 
   return (
+    <nav className="navbar navbar-expand-lg navbar-light bg-light">
+      <div className="container-fluid">
+       <a className="navbar-brand" href="/">CG</a>
     <ul className="navbar-nav">
       <li className="nav-item">
         <Link
@@ -24,15 +27,15 @@ function NavTabs() {
           About Me
         </Link>
       </li>
-      <li className="nav-item">
+      {/* <li className="nav-item">
         <Link
           to="/Portfolio"
           // Check to see if the currentPage is `Blog`, and if so we use the active link class from bootstrap. Otherwise, we set it to a normal nav-link
-          className={currentPage === '/Porrtfolio' ? 'nav-link active' : 'nav-link'}
+          className={currentPage === '/Portfolio' ? 'nav-link active' : 'nav-link'}
         >
           Portfolio
         </Link>
-      </li>
+      </li> */}
       <li className="nav-item">
         <Link
           to="/Contact"
@@ -43,6 +46,8 @@ function NavTabs() {
         </Link>
       </li>
     </ul>
+    </div>
+    </nav>
   );
 }
 
