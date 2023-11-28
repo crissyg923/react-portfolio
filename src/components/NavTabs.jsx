@@ -27,7 +27,7 @@ function NavTabs() {
           About Me
         </Link>
       </li>
-      {/* <li className="nav-item">
+      <li className="nav-item">
         <Link
           to="/Portfolio"
           // Check to see if the currentPage is `Blog`, and if so we use the active link class from bootstrap. Otherwise, we set it to a normal nav-link
@@ -35,7 +35,7 @@ function NavTabs() {
         >
           Portfolio
         </Link>
-      </li> */}
+      </li>
       <li className="nav-item">
         <Link
           to="/Contact"
