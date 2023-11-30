@@ -1,7 +1,11 @@
 :root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  /* font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif; */
+  font-family: 'Meow Script', cursive;
+  font-family: 'Titillium Web', sans-serif;
   line-height: 1.5;
   font-weight: 400;
+  --melon: rgb(237, 92, 116);
+  --mustard: rgb(216, 216, 18);
   
 }
 * {
@@ -10,18 +14,88 @@
   box-sizing: border-box;
 }
 body {
-  background-color: bisque;
+  /* background-color: var(--melon); */
+  background-color: black;
+  color: white;
+}
+
+
+
+.avatar {
+  border-radius: 50%;
+  border: black inset;
+}
+.homepage {
+  padding-top: 60px;
+  /* border-left: solid var(--melon) */
+}
+.homeheading {
+  padding-bottom: 20px;
+  font-family: 'Titillium Web';
+  /* color: var(--melon) */
   
 }
 
-footer {
-  position: fixed;
-  bottom: 0;
-}
-.avatar {
-  border-radius: 50%;
+.abouttext {
+  padding-top: 20px;
 }
 
+.resumebutton {
+  font-size: 18px;
+  padding-left: 10px;
+  margin: 3px;
+}
+.innerbutton {
+  padding: 3px;
+  /* font-family: 'Meow Script'; */
+  border: solid var(--mustard);
+  background-color: black;
+  color: var(--mustard)
+
+}
+
+.crystal {
+  font-family: 'Meow Script';
+  font-size: 80px;
+  color: rgb(216, 216, 18);
+}
+.hometext {
+  font-family: 'Titillium Web';
+  line-height: 1.5;
+}
+.button {
+  border: groove white 2px;
+}
+.sitenav {
+  background-color: var(--melon);
+}
+
+.curved {
+  position: relative;
+  background: #2c3e50;
+  height: 50vh;
+  border-bottom-left-radius: 50% 20%;
+  border-bottom-right-radius: 50% 20%;
+}
+.technologies {
+  padding-top: 30px;
+  border-top: solid var(--melon);
+  margin-top: 50px;
+  
+}
+.techtext {
+  font-size: 30px;
+  font-family: 'Titillium Web';
+}
+.card {
+  background-color: black;
+  margin: 10px;
+  border: solid white;
+  padding: 10px;
+}
+.portfolio {
+  padding-top: 20px;
+}
 
 /* a {
   font-weight: 500;
