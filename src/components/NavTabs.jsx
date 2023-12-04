@@ -4,15 +4,16 @@ function NavTabs() {
   const currentPage = useLocation().pathname;
 
   return (
-    <nav className="navbar navbar-expand-lg navbar-light bg-light ">
-      <div className="container-fluid sitenav">
-       <a className="navbar-brand" href="/">CG</a>
+  <header>
+    <div className="container-fluid navdisplay">
+    <nav className="navbar navbar-expand-lg navbar-light">
+      <div>
+       <a className="navbar-brand cg" href="/">CG</a>
+       </div>
     <ul className="navbar-nav">
       <li className="nav-item">
         <Link
           to="/"
-          // This is a conditional (ternary) operator that checks to see if the current page is "Home"
-          // If it is, we set the current page to 'nav-link-active', otherwise we set it to 'nav-link'
           className={currentPage === '/' ? 'nav-link active' : 'nav-link'}
         >
           Home
@@ -46,8 +47,10 @@ function NavTabs() {
         </Link>
       </li>
     </ul>
-    </div>
+   
     </nav>
+    </div>
+    </header>
   );
 }
 

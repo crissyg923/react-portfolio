@@ -1,13 +1,75 @@
-export default function AboutPage() {
-    return (
-        <div className="container h-100 text-center abouttext">
-            <p>
-            Career switches can be exciting, yet daunting.  However, if you never take the leap, you will never know where life could take you outside of your comfort zone.
-            I am currently a teacher, but I knew that it was time for something new.  In June 2023, I took the first leap to becoming a web developer and started classes 3 weeks later.
-            In December 2023, I received my Full-Stack Web Developer certificate from Rutgers University and I have not looked back since.  During my time in school, I took
-            advantage of every learning opportunity that Rutgers had to offer, including taking a course to become certified in AI.  This has helped me develop an impressive portfolio
-            that displays my skills and what I can offer to your business.        
-            </p>
-        </div>
-    );
+import { Document, Font, Page, Text, View, StyleSheet, PDFViewer, PDFDownloadLink } from '@react-pdf/renderer';
+import { saveAs } from 'file-saver';
+
+const ResumeDocument = () => {
+  return (
+    
+    <Document>
+      <Page size="A4" style={styles.page}>
+        <View style={styles.section}>
+          <Text style={styles.header}>Crystal Green</Text>
+          <Text style={styles.contact}>300 Carteret Place</Text>
+          <Text style={styles.contact}>Apt 3D</Text>
+          <Text style={styles.contact}>Orange, NJ 07050</Text>
+          <Text style={styles.contact}>862-205-9019</Text>
+          <Text style={styles.contact2}>Email: cgreen.developer@gmail.com</Text>
+          
+          <Text>Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde modi molestiae voluptas ab corrupti pariatur cum magnam quae illo, recusandae fugiat omnis et excepturi perferendis! Minus, fugiat est. Dicta, id.</Text>
+          <Text> Education</Text>
+          <Text>Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde modi molestiae voluptas ab corrupti pariatur cum magnam quae illo, recusandae fugiat omnis et excepturi perferendis! Minus, fugiat est. Dicta, id.</Text>
+        </View>
+      </Page>
+    </Document>
+   
+  );
+};
+const styles = StyleSheet.create({
+  page: {
+    fontFamily: 'Times-Roman',
+    fontSize: 12,
+    padding: 40,
+  },
+  section: {
+    marginBottom: 10,
+  },
+  header: {
+    fontSize: 30,
+    marginBottom: 10,
+    borderBottom: 3,
+    paddingBottom: 3,
+  },
+  subHeader: {
+    fontSize: 16,
+    marginBottom: 5,
+    
+  },
+  contact: {
+    fontWeight: 'thin',
+  },
+  contact2: {
+    borderBottom: 3,
+    paddingBottom: 3,
+    borderBottomColor: 'gray',
+  }
+});
+const Resume = () => {
+  const generatePDF = () => {
+    const blob = new Blob([<ResumeDocument />], { type: 'application/pdf' });
+    saveAs(blob, 'Your_Resume.pdf');
+  };
+  
+return (
+<div className="resume">
+      <h2>Resume</h2>
+      <PDFViewer width="80%" height={500}>
+        <ResumeDocument />
+      </PDFViewer>
+      <PDFDownloadLink className="resumebutton innerbutton" document={<ResumeDocument />} fileName="Your_Resume.pdf">
+        {({ blob, url, loading, error }) =>
+          loading ? 'Loading document...' : 'Download PDF'
+        }
+      </PDFDownloadLink>
+    </div>
+  )
 }
+export default Resume

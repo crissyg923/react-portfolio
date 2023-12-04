@@ -4,14 +4,14 @@
   font-family: 'Titillium Web', sans-serif;
   line-height: 1.5;
   font-weight: 400;
-  --melon: rgb(237, 92, 116);
-  --mustard: rgb(216, 216, 18);
+  --melon: #ed5c74;
+  --mustard: rgb(217, 217, 18)
   
 }
 * {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
+  /* box-sizing: border-box; */
 }
 body {
   /* background-color: var(--melon); */
@@ -19,14 +19,28 @@ body {
   color: white;
 }
 
-
+header {
+  background-color: var(--melon);
+  width: 100%;
+}
+.navdisplay {
+  width: 100%;
+}
+.cg {
+  /* font-family: 'Meow Script', cursive; */
+  font-weight: bold;
+  font-family: 'Titillium Web', sans-serif;
+  font-size:30px;
+}
 
 .avatar {
   border-radius: 50%;
   border: black inset;
 }
+
 .homepage {
   padding-top: 60px;
+  display: flex;
   /* border-left: solid var(--melon) */
 }
 .homeheading {
@@ -66,9 +80,7 @@ body {
 .button {
   border: groove white 2px;
 }
-.sitenav {
-  background-color: var(--melon);
-}
+
 
 .curved {
   position: relative;
@@ -90,12 +102,57 @@ body {
 .card {
   background-color: black;
   margin: 10px;
-  border: solid white;
+  border: solid 3px var(--mustard);
   padding: 10px;
+  color: white;
 }
 .portfolio {
   padding-top: 20px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
 }
+.portfolioitems {
+  display: flex;
+  justify-content: center;
+}
+.contact-page {
+  padding-top: 30px;
+}
+.contactbox {
+  border: solid 3px var(--mustard);
+  border-radius: 5%;
+  padding: 30px;
+  margin: 10px;
+}
+.hireme {
+  padding-top: 15px;
+}
+.resume {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+
+
+
+@media (max-width: 760px) {
+  .homepage {
+    justify-content: center;
+  }
+  .hometext {
+    text-align: center;
+  }
+  .portfolio {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+  .singleitem {
+    width: 100%;
+  }
+  }
 
 /* a {
   font-weight: 500;
