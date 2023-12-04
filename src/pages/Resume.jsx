@@ -55,7 +55,7 @@ const styles = StyleSheet.create({
 const Resume = () => {
   const generatePDF = () => {
     const blob = new Blob([<ResumeDocument />], { type: 'application/pdf' });
-    saveAs(blob, 'Your_Resume.pdf');
+    saveAs(blob, 'CGreen_Resume.pdf');
   };
   
 return (
@@ -69,6 +69,7 @@ return (
           loading ? 'Loading document...' : 'Download PDF'
         }
       </PDFDownloadLink>
+
     </div>
   )
 }

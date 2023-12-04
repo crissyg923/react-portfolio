@@ -11,7 +11,8 @@ export default function PortfolioPage(props) {
   <div className="card-body">
     <h5 className="card-title">{data.title}</h5>
     <p className="card-text">{data.description}</p>
-    <a href={data.link}><button className="resumebutton innerbutton">Go somewhere</button></a>
+    <a href={data.github}><button className="resumebutton innerbutton">Github</button></a>
+    <a href={data.deployed}><button className="resumebutton innerbutton">Deployed</button></a>
   </div>
 </div>
 </>
