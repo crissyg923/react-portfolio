@@ -1,12 +1,14 @@
+import Avatar from '../images/Portfolio-avatar.png';
+
 export default function AboutPage() {
     return (
         <div className="container h-100 text-center abouttext">
+            <h1>About Me</h1>
+            <img src={Avatar} className="avatar"width="300" height="300"/>
             <p>
-            Career switches can be exciting, yet daunting.  However, if you never take the leap, you will never know where life could take you outside of your comfort zone.
-            I am currently a teacher, but I knew that it was time for something new.  In June 2023, I took the first leap to becoming a web developer and started classes 3 weeks later.
-            In December 2023, I received my Full-Stack Web Developer certificate from Rutgers University and I have not looked back since.  During my time in school, I took
-            advantage of every learning opportunity that Rutgers had to offer, including taking a course to become certified in AI.  This has helped me develop an impressive portfolio
-            that displays my skills and what I can offer to your business.        
+            As a former fashion designer and recent graduate of Rutgers Full Stack Coding program, I can assist in all aspects
+            of your web application needs.  I understand the importance of having a reliable and functional site that has a polished
+            UI and stays on brand.         
             </p>
         </div>
     );

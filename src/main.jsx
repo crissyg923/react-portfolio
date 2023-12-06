@@ -12,6 +12,7 @@ import HomePage from './pages/HomePage';
 import ContactPage from './pages/ContactPage';
 import Resume from './pages/Resume';
 import PortfolioPage from './pages/PortfolioPage';
+import AboutMe from './pages/Aboutme'
 import  data  from './utils/PortfolioData';
 
 // Define the accessible routes, and which components respond to which URL
@@ -32,6 +33,10 @@ const router = createBrowserRouter([
       {
         path: 'contact',
         element: <ContactPage />,
+      },
+      {
+        path: 'aboutme',
+        element: <AboutMe />,
       },
       {
         path: 'portfolio',

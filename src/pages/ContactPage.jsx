@@ -7,7 +7,7 @@ export default function ContactPage() {
             <div className="row">
             <div className="col-sm-12 col-md-6 hireme">
                <img className="hireme" width= "300" height= "300" src={hireme} />
-            </div>
+        </div>
                 <div className="col-sm-12 col-md-6">
         <div className="contactbox">
         <form>
@@ -17,7 +17,7 @@ export default function ContactPage() {
         </div>
         <div className="col-12">
          <label htmlFor="inputEmail" className="form-label">Email Address</label>
-        <input ref={ref} onChange={handleChange} type="email" className="form-control" id="inputEmail3" placeholder="Enter email" />
+        <input type="email" className="form-control" id="inputEmail3" placeholder="Enter email" />
         </div>
         <div className="form-group">
         <label htmlFor="exampleFormControlTextarea1">Message</label>
