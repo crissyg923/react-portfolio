@@ -1,5 +1,7 @@
-import { Document, Font, Page, Text, View, StyleSheet, PDFViewer, PDFDownloadLink } from '@react-pdf/renderer';
+import { Document, Page, Image, Text, View, StyleSheet, PDFViewer, PDFDownloadLink } from '@react-pdf/renderer';
 import { saveAs } from 'file-saver';
+import flower from '../images/friendlyfleur.png';
+import resume from '../images/resume.png';
 
 const ResumeDocument = () => {
   return (
@@ -7,16 +9,9 @@ const ResumeDocument = () => {
     <Document>
       <Page size="A4" style={styles.page}>
         <View style={styles.section}>
-          <Text style={styles.header}>Crystal Green</Text>
-          <Text style={styles.contact}>300 Carteret Place</Text>
-          <Text style={styles.contact}>Apt 3D</Text>
-          <Text style={styles.contact}>Orange, NJ 07050</Text>
-          <Text style={styles.contact}>862-205-9019</Text>
-          <Text style={styles.contact2}>Email: cgreen.developer@gmail.com</Text>
-          
-          <Text>Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde modi molestiae voluptas ab corrupti pariatur cum magnam quae illo, recusandae fugiat omnis et excepturi perferendis! Minus, fugiat est. Dicta, id.</Text>
-          <Text> Education</Text>
-          <Text>Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde modi molestiae voluptas ab corrupti pariatur cum magnam quae illo, recusandae fugiat omnis et excepturi perferendis! Minus, fugiat est. Dicta, id.</Text>
+          <Image
+          src={resume}
+        />
         </View>
       </Page>
     </Document>
@@ -28,29 +23,8 @@ const styles = StyleSheet.create({
     fontFamily: 'Times-Roman',
     fontSize: 12,
     padding: 40,
-  },
-  section: {
-    marginBottom: 10,
-  },
-  header: {
-    fontSize: 30,
-    marginBottom: 10,
-    borderBottom: 3,
-    paddingBottom: 3,
-  },
-  subHeader: {
-    fontSize: 16,
-    marginBottom: 5,
-    
-  },
-  contact: {
-    fontWeight: 'thin',
-  },
-  contact2: {
-    borderBottom: 3,
-    paddingBottom: 3,
-    borderBottomColor: 'gray',
   }
+
 });
 const Resume = () => {
   const generatePDF = () => {
