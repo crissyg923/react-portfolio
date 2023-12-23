@@ -119,6 +119,8 @@ header {
 }
 .contact-page {
   padding-top: 30px;
+  display: flex;
+  justify-content: center;
 }
 .contactbox {
   border: solid 3px var(--mustard);
@@ -133,6 +135,10 @@ header {
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+.flexcenter {
+  display: flex;
+  justify-content: center;
 }
 
 

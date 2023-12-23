@@ -42,10 +42,7 @@ function Form (){
 
     return (
         <div className="container h-100 contact-page">
-            <div className="d-flex justify-center">
-    
-                 <div className="col-sm-12 col-md-6">
-                    <div className="contactbox">
+        <div className="contactbox col-12 col-md-8">
 
         <form onSubmit={handleFormSubmit}>
         <div className="col-12">
@@ -72,7 +69,7 @@ function Form (){
         placeholder="Enter email" 
         />
         </div>
-        <div className="col-12">
+        <div className="col-12 ">
         <label htmlFor="exampleFormControlTextarea1">Message</label>
         <textarea 
         className="form-control" 
@@ -84,15 +81,15 @@ function Form (){
 
         </textarea>
         </div>
-        <button className="resumebutton innerbutton" type="submit">Submit</button>
+        <div class="flexcenter">
+        <button className="resumebutton innerbutton " type="submit">Submit</button>
+        </div>
         </form>
         {errorMessage && (
         <div>
           <p className="error-text">{errorMessage}</p>
         </div>
       )}
-        </div>
-        </div>
         </div>
         </div>
     );
