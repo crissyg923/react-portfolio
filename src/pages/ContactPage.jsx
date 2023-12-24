@@ -1,4 +1,6 @@
 import { useState } from 'react';
+import { useRef } from 'react';
+import emailjs from '@emailjs/browser';
 function Form (){
 
      const [name, setName] = useState('');
@@ -21,6 +23,31 @@ function Form (){
           setMessage(inputValue);
         }
       };
+      const form = useRef();
+
+      const sendEmail = (e) => {
+        e.preventDefault();
+        if (!email || !name || !message) {
+            setErrorMessage('Please complete all fields befoe submitting!');
+            return;
+  
+          }
+         
+          alert(`Hello ${name}. Your message has been sent.`)
+          
+  
+          setName('');
+          setEmail('');
+          setMessage('');
+    
+        emailjs.sendForm('service_f2esgrp', 'template_dcxs5xi', form.current, 'wiTzStioYERmKqhNO')
+          .then((result) => {
+              console.log(result.text);
+              console.log('Message Sent!')
+          }, (error) => {
+              console.log(error.text);
+          });
+      };
       const handleFormSubmit = (e) => {
         // Preventing the default behavior of the form submit (which is to refresh the page)
         e.preventDefault();
@@ -31,20 +58,22 @@ function Form (){
           return;
 
         }
-        alert(`Hello ${name}. Your message has been sent.`);
-    
-        // If everything goes according to plan, we want to clear out the input after a successful registration.
+       
+        alert(`Hello ${name}. Your message has been sent.`)
+        
+
         setName('');
         setEmail('');
         setMessage('');
       };
 
 
+
     return (
         <div className="container h-100 contact-page">
         <div className="contactbox col-12 col-md-8">
 
-        <form onSubmit={handleFormSubmit}>
+        <form ref={form} onSubmit={sendEmail}>
         <div className="col-12">
          <label htmlFor="inputName" className="form-label">Name</label>
         <input 
