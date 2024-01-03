@@ -1,7 +1,9 @@
-import { Document, Page, Image, Text, View, StyleSheet, PDFViewer, PDFDownloadLink } from '@react-pdf/renderer';
+import { Document, Page, Image, View, StyleSheet, PDFViewer, PDFDownloadLink } from '@react-pdf/renderer';
 import { saveAs } from 'file-saver';
-import flower from '../images/friendlyfleur.png';
+
 import resume from '../images/resume.png';
+import page1 from '../images/pageone.png';
+import page2 from '../images/pagetwo.png'
 
 const ResumeDocument = () => {
   return (
@@ -10,7 +12,10 @@ const ResumeDocument = () => {
       <Page size="A4" style={styles.page}>
         <View style={styles.section}>
           <Image
-          src={resume}
+          src={page1}
+        />
+          <Image
+          src={page2}
         />
         </View>
       </Page>
