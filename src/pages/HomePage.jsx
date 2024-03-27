@@ -58,6 +58,12 @@ export default function HomePage() {
                     <div className="p-2">
                     <h3>mongoDB</h3>
                     </div>
+                    <div className="p-2">
+                    <h3>MERN</h3>
+                    </div>
+                    <div className="p-2">
+                    <h3>OpenAI</h3>
+                    </div>
             
                     </div>
                 </div>
