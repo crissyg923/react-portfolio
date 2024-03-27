@@ -111,7 +111,7 @@ function Form (){
 
         </textarea>
         </div>
-        <div class="flexcenter">
+        <div className="flexcenter">
         <button className="resumebutton innerbutton " type="submit">Submit</button>
         </div>
         </form>
@@ -120,6 +120,9 @@ function Form (){
           <p className="error-text">{errorMessage}</p>
         </div>
       )}
+        </div>
+        <div className='email'>
+          <h3>Email: cgreen.developer@gmail.com</h3>
         </div>
         </div>
     );

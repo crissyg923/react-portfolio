@@ -1,9 +1,14 @@
+import { ReactSVG } from 'react-svg';
 import { Link } from 'react-router-dom';
 import Avatar from '../images/Portfolio-avatar.png';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {  faReact, faJs} from '@fortawesome/free-brands-svg-icons';
 
+import MysqlIcon from '../images/icons/mysql.svg';
+import NodeIcon from '../images/icons/node.svg';
+import HandlebarsIcon from '../images/icons/handlebars.svg';
+import CSSIcon from '../images/icons/css.svg';
 
 
 export default function HomePage() {
@@ -27,10 +32,34 @@ export default function HomePage() {
             </span> 
             </h4>
             <section>
-                <div className="text-center technologies">
-                    <h5 className="techtext">Known Technologies:</h5>
-                    <FontAwesomeIcon icon={faReact} size="2x" />
-                    <FontAwesomeIcon icon={faJs} size="2x"/>
+                <div className="text-center technologies d-flex justify-content-center flex-column">
+                    <h5 className="techtext">Highlighted Skills:</h5>
+                <div className="d-flex flex-row justify-content-center">
+                    <div className="p-2">
+                    <FontAwesomeIcon icon={faReact} size="4x" />
+                    </div>
+                    <div className="p-2">
+                    <FontAwesomeIcon icon={faJs} size="4x"/>
+                    </div>
+                    <div className="p-2">
+                    <ReactSVG src={MysqlIcon} style={{ width: '75px', height: '75px' }} />
+                    </div>
+                    <div className="p-2">
+                    <ReactSVG src={NodeIcon} style={{ width: '75px', height: '75px' }} />
+                    </div>
+                    <div className="p-2">
+                    <ReactSVG src={HandlebarsIcon} style={{ width: '75px', height: '75px' }} />
+                    </div>
+                    </div>
+                    <div className="d-flex flex-row justify-content-center">
+                    <div className="p-2">
+                    <h3>Express</h3>
+                    </div>
+                    <div className="p-2">
+                    <h3>mongoDB</h3>
+                    </div>
+            
+                    </div>
                 </div>
             </section>
            
