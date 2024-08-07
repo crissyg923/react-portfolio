@@ -2,8 +2,8 @@ import { Document, Page, Image, View, StyleSheet, PDFViewer, PDFDownloadLink } f
 import { saveAs } from 'file-saver';
 
 import resume from '../images/resume.png';
-import page1 from '../images/pageone.png';
-import page2 from '../images/pagetwo.png'
+import page1 from '../images/page1.png';
+import page2 from '../images/pagetwo.jpg'
 
 const ResumeDocument = () => {
   return (
